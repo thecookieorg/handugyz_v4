@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'pages/index'
+  devise_for :admins
+  devise_for :handies
+  devise_for :users
+  root 'pages#index'
 
   get 'pages/about'
 
